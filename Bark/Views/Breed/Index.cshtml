@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Breed>
+
+<h2>Breeds</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Temperment</th>
+        <th>Life Expectancy</th>
+        <th>Hair Type</th>
+
+    </tr>
+
+    @foreach (var breed in Model)
+    {
+        <tr>
+            <td>@breed.ID</td>
+            <td>@breed.Name</td>
+            <td>@breed.Size</td>
+            <td>@breed.Temperment</td>
+            <td>@breed.Life_Expectancy</td>
+            <td>@breed.Hair_Type</td>
+        </tr>
+    }
+</table>
