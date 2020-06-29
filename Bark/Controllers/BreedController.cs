@@ -27,5 +27,47 @@ namespace Bark.Controllers
 
             return View(breeds);
         }
+
+        public IActionResult ViewBreed(int id)
+        {
+            var breed = repo.GetBreed(id);
+            return View(breed);
+        }
+
+        public IActionResult UpdateBreed(int id)
+        {
+            Breed breed = repo.GetBreed(id);
+            repo.UpdateBreed(breed);
+
+            if(breed == null)
+            {
+                return View("BreedNotFound");
+            }
+            return View(breed);
+        }
+
+        public IActionResult UpdateBreedToDatabase(Breed breed)
+        {
+            repo.UpdateBreed(breed);
+            return RedirectToAction("ViewBreed", new { id = breed.ID });
+        }
+
+
+        public IActionResult InsertBreed(Breed breed)
+        {
+            
+            return View(breed);
+        }
+        public IActionResult InsertBreedToDatabase(Breed breedToInsert)
+        {
+            repo.InsertBreed(breedToInsert);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DeleteBreed(Breed breed)
+        {
+            repo.DeleteBreed(breed);
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -9,7 +9,6 @@ namespace Bark.Models
 {
     public class Breed
     {
-        
         public int ID { get; set; }
         public string Name { get; set; }
         public string Size { get; set; }

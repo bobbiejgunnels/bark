@@ -1,0 +1,20 @@
+﻿@model Breed
+
+<h2>Edit @Model.Name</h2>
+
+@using (Html.BeginForm("UpdateBreedToDatabase", "Breed", "Post"))
+{
+    <input asp-for="ID" type="hidden" vale="@Model.ID" />
+    <label asp-for="Name" class="control-label"> Name</label>
+    <input type="text" name="Name" class="form-control" value="@Model.Name" />
+    <label asp-for="Size" class="control-label">Size</label>
+    <input type="text" step="0.01" name="Size" class="form-control" value="@Model.Size" />
+    <label asp-for="Temperment" class="control-label"> Temperment</label>
+    <input type="text" name="Temperment" class="form-control" value="@Model.Temperment" />
+    <label asp-for="Life_Expectancy" class="control-label">Life Expectancy</label>
+    <input type="text" step="0.01" name="Life_Expectancy" class="form-control" value="@Model.Life_Expectancy" />
+    <label asp-for="Hair_Type" class="control-label">Hair Type</label>
+    <input type="text" name="Hair_Type" class="form-control" value="@Model.Hair_Type" />
+
+    <input type="submit" value="Update Breed" class="btn btn-primary" />
+}
