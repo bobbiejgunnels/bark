@@ -8,10 +8,12 @@
     <PackageReference Include="MySql.Data" Version="8.0.20" />
     <PackageReference Include="Dapper" Version="2.0.35" />
     <PackageReference Include="Microsoft.ApplicationInsights" Version="2.15.0-beta2" />
-    <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.7" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
-    <PackageReference Include="AttributeRouting" Version="3.4.2" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.4" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.4" />
+    <PackageReference Include="Microsoft.NETCore.App" Version="2.1.0"><AllowExplicitVersion>true</AllowExplicitVersion>
+</PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\netcoreapp3.1\ConnectionString.txt" />
@@ -19,5 +21,6 @@
   <ItemGroup>
     <Folder Include="Views\Breed\" />
     <Folder Include="App_Start\" />
+    <Folder Include="Api\" />
   </ItemGroup>
 </Project>

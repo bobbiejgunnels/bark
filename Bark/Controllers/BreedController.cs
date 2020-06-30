@@ -11,7 +11,8 @@ using Dapper;
 
 namespace Bark.Controllers
 {
-    public class BreedController : Controller
+    public class BreedController : Controller  
+
     {
         private readonly IBreedRepository repo;
 
