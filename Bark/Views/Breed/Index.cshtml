@@ -19,18 +19,16 @@
         <th>Hair Type</th>
 
     </tr>
-
+   
     @foreach (var breed in Model)
     {
-<tr>
-    
-
-    <td><button><a href=/Breed/ViewBreed/@breed.ID>@breed.ID</a></button></td>
-    <td>@breed.Name</td>
-    <td>@breed.Size</td>
-    <td>@breed.Temperment</td>
-    <td>@breed.Life_Expectancy</td>
-    <td>@breed.Hair_Type</td>
-</tr>
+        <tr>
+            <td><button><a href=/Breed/ViewBreed/@breed.ID>@breed.ID</a></button></td>
+            <td>@breed.Name</td>
+            <td>@breed.Size</td>
+            <td>@breed.Temperment</td>
+            <td>@breed.Life_Expectancy</td>
+            <td>@breed.Hair_Type</td>
+        </tr>
      }
 </table>
