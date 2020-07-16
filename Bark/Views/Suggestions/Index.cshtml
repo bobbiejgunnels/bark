@@ -6,8 +6,7 @@
 
 </br>
 
-    @foreach (var suggestion in Model)
-    {
+    
         <table>
             <tr>
                 <td class="tableHeader">Name</td>
@@ -15,20 +14,35 @@
                 <td class="tableHeader">Temperment</td>
                 <td class="tableHeader">Life Expectancy</td>
                 <td class="tableHeader">Hair Type</td>
+                <td class="tableHeader"></td>
             </tr>
-
+            @foreach (var suggestion in Model)
+            {
             <tr>
                 <td class="">@suggestion.Name</td>
                 <td>@suggestion.Size</td>
                 <td>@suggestion.Temperment</td>
                 <td>@suggestion.Life_Expectancy</td>
                 <td>@suggestion.Hair_Type</td>
-       
+                <td>
+                            
+                    @using (Html.BeginForm("InsertBreedToDatabase", "Breed", "Post"))
+                    {
+                        <input type="hidden" name="Name" class="form-control" value="@suggestion.Name" />
+                        <input type="hidden" name="Size" class="form-control" value="@suggestion.Size" />
+                        <input type="hidden" name="Temperment" class="form-control" value="@suggestion.Temperment" />
+                        <input type="hidden" name="Life_Expectancy" class="form-control" value="@suggestion.Life_Expectancy" />
+                        <input type="hidden" name="Hair_Type" class="form-control" value="@suggestion.Hair_Type" />
+                        <input type="submit" value="Save Suggestion" class="moreinfo" />
+                    }
+                </td>
             </tr>
+            }
+        
         </table>
         
-            <button class="createSuggestion"><a href="/Suggestion/InsertSuggestion/">Add this suggestion</a></button>
-    }
+        
+    
 
 
 
