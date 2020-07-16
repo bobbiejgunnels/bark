@@ -19,6 +19,8 @@ namespace Bark
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,6 +31,17 @@ namespace Bark
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
+                {
+                    builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+
             services.AddScoped<IDbConnection>((s) =>
             {
                 IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("new_schema"));
@@ -37,6 +50,7 @@ namespace Bark
             });
             
             services.AddTransient<IBreedRepository, BreedRepository>();
+            services.AddTransient<ISuggestionRepository,SuggestionRepository>();
 
             services.AddControllersWithViews();
         }
@@ -58,12 +72,16 @@ namespace Bark
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseCors(x => x
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader());
-            app.UseAuthentication();
+            app.UseCors(MyAllowSpecificOrigins);
+
+
+            //app.UseCors(x => x
+              //  .AllowAnyOrigin()
+                //.AllowAnyMethod()
+                //.AllowAnyHeader());
+            //app.UseAuthentication();
             app.UseAuthorization();
+     
 
             app.UseEndpoints(endpoints =>
             {

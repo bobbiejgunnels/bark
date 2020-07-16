@@ -52,12 +52,11 @@ namespace Bark.Controllers
             return RedirectToAction("ViewBreed", new { id = breed.ID });
         }
 
-
         public IActionResult InsertBreed(Breed breed)
         {
-            
             return View(breed);
         }
+
         public IActionResult InsertBreedToDatabase(Breed breedToInsert)
         {
             repo.InsertBreed(breedToInsert);

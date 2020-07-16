@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.0.20" />
+    <PackageReference Include="MySql.Data" Version="8.0.21" />
     <PackageReference Include="Dapper" Version="2.0.35" />
     <PackageReference Include="Microsoft.ApplicationInsights" Version="2.15.0-beta2" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
@@ -17,7 +17,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Breed\" />
-    <Folder Include="App_Start\" />
-    <Folder Include="Api\" />
+    <Folder Include="Views\Suggestions\" />
   </ItemGroup>
 </Project>

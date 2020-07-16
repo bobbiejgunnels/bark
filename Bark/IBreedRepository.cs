@@ -15,6 +15,7 @@ namespace Bark
             public void UpdateBreed(Breed breed);
             public void InsertBreed(Breed breedToInsert);
             public void DeleteBreed(Breed breed);
-        }
+            
+    }
 
 }

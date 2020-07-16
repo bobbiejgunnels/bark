@@ -2,14 +2,14 @@
 
 <h3>@Model.Name Information</h3>
 
-<table class="table-bordered">
+<table>
     <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Size</th>
-        <th>Temperment</th>
-        <th>Life Expectancy</th>
-        <th>Hair Type</th>
+        <th class="tableHeader">ID</th>
+        <th class="tableHeader">Name</th>
+        <th class="tableHeader">Size</th>
+        <th class="tableHeader">Temperment</th>
+        <th class="tableHeader">Life Expectancy</th>
+        <th class="tableHeader">Hair Type</th>
     </tr>
 
     <tr>
@@ -24,13 +24,13 @@
 
 
     <div style="display: block">
-    <button><a href="/Breed/UpdateBreed/@Model.ID">Update this Breed</a></button>
+    <button><a class="a" href="/Breed/UpdateBreed/@Model.ID">Update this Breed</a></button>
     </div>
 
     <div style="display: block">
         @using(Html.BeginForm("DeleteBreed", "Breed", "Post"))
         {
             <input type="hidden" asp-for="ID" value="@Model.ID" />
-            <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this breed" />
+            <input class="a" type="submit" onclick="return confirm('Are you sure?')" value="Delete this breed" />
         }
     </div>

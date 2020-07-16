@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Suggestion>
+
+
+<h2 class="SuggestionHeader">Suggestions</h2>
+</br>
+
+</br>
+
+    @foreach (var suggestion in Model)
+    {
+        <table>
+            <tr>
+                <td class="tableHeader">Name</td>
+                <td class="tableHeader">Size</td>
+                <td class="tableHeader">Temperment</td>
+                <td class="tableHeader">Life Expectancy</td>
+                <td class="tableHeader">Hair Type</td>
+            </tr>
+
+            <tr>
+                <td class="">@suggestion.Name</td>
+                <td>@suggestion.Size</td>
+                <td>@suggestion.Temperment</td>
+                <td>@suggestion.Life_Expectancy</td>
+                <td>@suggestion.Hair_Type</td>
+       
+            </tr>
+        </table>
+        
+            <button class="createSuggestion"><a href="/Suggestion/InsertSuggestion/">Add this suggestion</a></button>
+    }
+
+
+

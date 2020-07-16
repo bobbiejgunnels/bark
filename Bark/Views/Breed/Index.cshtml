@@ -1,34 +1,34 @@
 ﻿@model IEnumerable<Breed>
 
-<h2>Breeds</h2>
+
+<h2 class="breedsHeader">Breeds</h2>
 </br>
 
-<div style =" display: block">
-    
-    <button><a href="/Breed/InsertBreed/">Create a new breed</a></button>
+<div style=" display: block">
+
+    <button class="create"><a href="/Breed/InsertBreed/">Create a new breed</a></button>
 </div>
+</br>
 
 
-<table class="table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Size</th>
-        <th>Temperment</th>
-        <th>Life Expectancy</th>
-        <th>Hair Type</th>
 
-    </tr>
-   
-    @foreach (var breed in Model)
-    {
-        <tr>
-            <td><button><a href=/Breed/ViewBreed/@breed.ID>@breed.ID</a></button></td>
-            <td>@breed.Name</td>
-            <td>@breed.Size</td>
-            <td>@breed.Temperment</td>
-            <td>@breed.Life_Expectancy</td>
-            <td>@breed.Hair_Type</td>
-        </tr>
-     }
-</table>
+    <div class="card-columns">
+        @foreach (var breed in Model)
+        {
+        <div class="card">
+       
+            <div class="card-img" style="background-image:url('https://static8.depositphotos.com/1007168/964/i/450/depositphotos_9646033-stock-photo-outlined-paw-print.jpg')">
+                 </div>
+                <div class="card-body">
+                    
+                    <h5 class="card-title">@breed.Name</h5>
+                    <h4 class="card-title"><button class="moreinfo"><a href=/Breed/ViewBreed/@breed.ID>@breed.ID</a></button></h4>
+                    
+                </div>
+                
+            </div>
+
+        }
+        </div>
+
+

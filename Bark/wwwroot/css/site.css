@@ -1,15 +1,24 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+.breedsHeader {
+    font-size: 40px;
+    color: #59715f;
+    text-align: center
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+.h2 {
+    text-align: center;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    font-family: 'Yellowtail', cursive;
+    font-size: xx-large;
+    text-align: center;
+    word-break: break-all;
 }
 
 .btn-primary {
@@ -61,11 +70,220 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-attachment: fixed;
+}
+.bg-footer {
+    background: -webkit-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: -o-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: -moz-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: linear-gradient(110deg, #dcadac 60%, #59715f 60%);
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    background: -webkit-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: -o-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: -moz-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: linear-gradient(110deg, #dcadac 60%, #59715f 60%);
 }
+
+/*card columns*/
+
+.moreinfo {
+    background-color: #59715fd9;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border: outset;
+}
+.card-columns .card-body {
+    height: 200px;
+    font-family: 'Nunito', sans-serif;
+    background: #fbfafd;
+}
+
+
+    .card-columns .card-img
+
+{
+    height: 165px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: .8;
+}
+
+
+.card-columns .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
+}
+.card-columns {
+  
+    column-count: 0;
+}
+.card-columns .card {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.card-footer {
+    background: #fbfafd;
+}
+
+.card-title{
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.modal .card-img {
+    height: 500px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
+/*navigation bar*/
+.bg-navbar {
+    
+    background: -webkit-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: -o-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: -moz-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+}
+
+
+/*parallax */
+
+.parallax {
+    /* The image used */
+    background-image: url("https://cdn.hipwallpaper.com/i/58/10/cFquhp.jpg");
+    /* Set a specific height */
+    height: 600px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.text {
+    color: black;
+    font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000;
+    position: absolute;
+    z-index: 1000;
+    top: 150px;
+    left: 620px;
+    font-stretch: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: .7;
+}
+
+.img {
+    position: absolute;
+    z-index: 1000;
+    top: 280px;
+    left: 450px;
+    width: 540px; /* you can use % */
+    height: auto;
+}
+
+/*feature info*/
+.paragraph {
+    font-size: larger;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("https://wetellyouhow.com/wp-content/uploads/2013/08/Dog-on-Back-Submissive-Urination.jpg");
+    /* Set a specific height */
+    height: 400px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.content-description {
+    font-size: 15px;
+}
+
+/* Hyperlinks */
+a {
+    color: #dcadac;
+    font-weight: 600;
+}
+
+.a {
+    color: black;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #59715f;
+}
+
+.section3 {
+    position: absolute;
+    z-index: 1000;
+    left: 200px;
+}
+
+.need{
+    height: 100%;
+}
+
+.create {
+    background-color: #59715fd9;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border: outset;
+}
+
+.grooming{
+    height: 250px;
+
+}
+
+.table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.tableHeader {
+    font-weight: 700;
+    background: #dcadac;
+    padding: 8px;
+
+}
+
+.createSuggestion {
+    background-color: #59715fd9;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border: outset;
+}
+
+
+

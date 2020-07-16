@@ -553,11 +553,11 @@ pre code {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
-}
+}@
 
 @media (min-width: 768px) {
   .container {
@@ -4168,8 +4168,13 @@ input[type="button"].btn-block {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
-.navbar-brand {
+.bg-navbar {
+    background: -webkit-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: -o-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: -moz-linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+    background: linear-gradient(110deg, #dcadac 60%, #59715f 60%);
+}
+    .navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -4754,11 +4759,9 @@ input[type="button"].btn-block {
   margin-bottom: 0.75rem;
 }
 
-@media (min-width: 576px) {
+@media  {
   .card-columns {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
+ 
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
     column-gap: 1.25rem;
