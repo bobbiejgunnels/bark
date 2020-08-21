@@ -18,5 +18,7 @@
   <ItemGroup>
     <Folder Include="Views\Breed\" />
     <Folder Include="Views\Suggestions\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Assets\images\" />
   </ItemGroup>
 </Project>
